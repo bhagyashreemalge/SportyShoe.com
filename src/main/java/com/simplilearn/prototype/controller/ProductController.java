@@ -1,4 +1,4 @@
-/*package com.simplilearn.prototype.controller;
+package com.simplilearn.prototype.controller;
 
 import java.util.List;
 import java.util.Objects;
@@ -85,7 +85,7 @@ public class ProductController {
 	   return new ResponseEntity<Void>(HttpStatus.ACCEPTED);
    }
 	
-}*/
+}
 
 
 

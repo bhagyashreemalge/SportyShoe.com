@@ -80,15 +80,18 @@ public class PurchaseReportServiceImpl implements PurchaseReportService{
 		for(PurchaseReport eachpurchasereport:purchaseReports)
 		{
 			String[] purchasereportProducts=eachpurchasereport.getProduct().split(" ");
-			List<String> reportproductslist = Arrays.asList(purchasereportProducts);
-			
-			if(cproductnames.contains(reportproductslist))
+			List<String> reportproductslist=new ArrayList<>();
+			for(String productname:purchasereportProducts)
+			{
+				reportproductslist.add(productname);
+			}
+		    if(cproductnames.contains(reportproductslist))
 			{
 				cpurchasereports.add(eachpurchasereport);
 			}
 		}
 		
-		return cpurchasereports;
+		return cpurchasereports;		
 	}
 
 	@SuppressWarnings("unlikely-arg-type")
